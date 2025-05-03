@@ -179,103 +179,15 @@
   }
 }
 
-#contactPartner {
-  text-align: justify;
-  background: #F9F9F9;
-  padding: 25px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-
-  input {
-    font-size: inherit;
-  }
-
-  h3 {
-    font-size: 30px;
-    margin-bottom: 30px;
-    font-weight: bold;
-  }
-
-  button[type="submit"] {
-    cursor: pointer;
-    width: 100%;
-    border: none;
-    background: $red;
-    color: #FFF;
-    margin: 0 0 5px;
-    padding: 10px;
-    font-size: 15px;
-  }
-
-  button[type="submit"]:hover {
-    background: var(--dark-red);
-    transition: background-color 0.3s ease-in-out;
-  }
-
-  button[type="submit"]:active {
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-  }
-}
-
-.inputCheckbox {
-  font-size: 15px;
-  margin: 15px 0;
-  font-size: 12px;
+.overlay {
+  z-index: 99999;
 }
 
 .partnerForm {
-  background-image: url("../img/123.jpg");
+  background-image: url("../../assets/img/123.jpg");
   width: 100%;
   z-index: -1;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  .fieldset {
-    border: medium none !important;
-    margin: 0 0 10px;
-    min-width: 100%;
-    padding: 0;
-    width: 100%;
-  }
-}
-
-.policyLabel {
-  a {
-    &:hover {
-      color: $red;
-    }
-  }
-}
-
-#contactPartner input[type="email"],
-#contactPartner input[type="tel"],
-#contactPartner input[type="text"],
-#contactPartner input[type="url"],
-#contactPartner textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  background: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-}
-
-#contactPartner input[type="email"]:hover,
-#contactPartner input[type="tel"]:hover,
-#contactPartner input[type="text"]:hover,
-#contactPartner input[type="url"]:hover,
-#contactPartner textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #aaa;
-}
-
-#contactPartner input:focus,
-#contactPartner textarea:focus {
-  outline: 0;
-  border: 1px solid #aaa;
-}
-
-.overlay {
-  z-index: 99999;
 }

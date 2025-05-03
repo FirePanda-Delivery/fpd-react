@@ -4,6 +4,7 @@ import AccordionBlock from '../../components/AccordionBlock';
 import questions from "../../assets/accordionPartner.json"
 
 import restaurantWork from "../../assets/img/restaurant-work.svg";
+import PartnerForm from "../../components/PartnerForm.jsx";
 
 
 const PartnersInfo = () => {
@@ -157,47 +158,10 @@ const PartnersInfo = () => {
                     </div>
                 </div>
             </section>
-
-            <section className="partner-form">
+            <section className={styles.partnerForm}>
                 <div className="container">
-                    <div className="partner-block-form">
-                        <form id="contactPartner">
-                            <h3>Заполните форму и с вами скоро свяжутся</h3>
-                            <fieldset>
-                                <input placeholder="Название компании" type="text" required/>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Ваше имя, фамилия" type="text" required/>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Ваш email" id="email" type="email" required/>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Ваш номер телефона" type="tel" id="phone" required/>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Ваш город" type="text" required/>
-                            </fieldset>
-                            <div className="input-checkbox">
-                                <input type="checkbox" name="policy" id="policy" className="policy"/>
-                                <label htmlFor="policy" className="policy-label">
-                                    Я даю ООО «Фаер Панда Деливери» свое согласие на обработку моих персональных данных
-                                    в
-                                    соответствии с Федеральным Законом от 27.07.2006 года № 152-ФЗ «О персональных
-                                    данных» на
-                                    условиях и для целей, определенных в этой заявке и в Политике конфиденциальности,
-                                    ознакомление с текстом которой я подтверждаю, в течение срока, необходимого для
-                                    достижения
-                                    указанных целей и 5 лет после их достижения.
-                                </label>
-                            </div>
-                            <fieldset>
-                                <button name="submit" type="submit" id="contact-submit"
-                                        data-submit="...Sending">отправить
-                                </button>
-                            </fieldset>
-                        </form>
-
+                    <div className={styles.partnerBlockForm}>
+                        <PartnerForm/>
                     </div>
                 </div>
             </section>

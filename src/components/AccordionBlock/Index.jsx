@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "./AccordionBlock.module.scss"
 
 const AccordionBlock = ({questions}) => {
-    const items = document.querySelectorAll("button");
+    const items = document.querySelectorAll(".accordion button");
     function toggleAccordion() {
         const itemToggle = this.getAttribute('aria-expanded');
         let i;

@@ -2,6 +2,7 @@ import React from "react";
 import styles from './CourierInfo.module.scss'
 import AccordionBlock from '../../components/AccordionBlock';
 import questions from "../../assets/accordionCourier.json";
+import CourierForm from "../../components/CourierForm.jsx";
 
 const CourierInfo = () => {
     return (
@@ -73,32 +74,7 @@ const CourierInfo = () => {
             <section className={styles.courierForm}>
                 <div className="container">
                     <div className={styles.courierBlockForm}>
-                        <form id="contact" action="" method="post">
-                            <h3>Заполните форму и с вами скоро свяжутся</h3>
-                            <fieldset>
-                                <input placeholder="Ваше имя" type="text" tabIndex="1" required autoFocus/>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Ваш email" id="email" type="email" tabIndex="2" required/>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Ваш номер телефона" type="tel" id="phone" tabIndex="3" required/>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Ваш город" type="text" tabIndex="4" required/>
-                            </fieldset>
-                            <div className={styles.inputCheckbox}>
-                                <input type="checkbox" name="policy" id="policy" className="policy"/>
-                                <label htmlFor="policy" className="policyLabel">
-                                    Я принимаю условия
-                                    <a href="#" target="_blank">Пользовательского соглашения</a>
-                                </label>
-                            </div>
-                            <fieldset>
-                                <button name="submit" type="submit" id="contactSubmit">отправить</button>
-                            </fieldset>
-                        </form>
-
+                        <CourierForm/>
                     </div>
                 </div>
             </section>
