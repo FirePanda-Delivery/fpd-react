@@ -1,0 +1,281 @@
+@import '../../scss/variables';
+
+.restaurantBlock {
+  padding-top: 160px;
+
+  a {
+    margin-top: 40px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+}
+
+.restaurant {
+  background-image: url("../../assets/img/restaurant-bg.jpg");
+  width: 100%;
+  height: 460px;
+  z-index: -1;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $black;
+
+  .btnLogin {
+    background: $red;
+    width: 130px;
+    height: 34px;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 200px;
+    margin: 0 auto;
+
+    &:hover {
+      background-color: $dark-red;
+    }
+  }
+
+
+  &Menu {
+    display: flex;
+    font-weight: bold;
+
+    li {
+      margin-left: 35px;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}
+
+.restaurantPlug {
+  background: $white;
+
+  &Block {
+    padding: 60px 0 70px;
+
+    h2 {
+      color: $black;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+  }
+
+  &Cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &Card {
+    display: flex;
+    padding: 20px;
+    max-width: 400px;
+    align-items: flex-start;
+    margin-top: 45px;
+    border: 1px solid rgb(0 0 0 / 30%);
+    border-left: 10px solid $red;
+  }
+
+  &Number {
+    font-size: 40px;
+    color: $black;
+    font-weight: bold;
+  }
+}
+
+.restaurantDescr {
+  margin: 0 15px;
+
+  &Title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+
+.restaurantAdvantages {
+  background-color: $black;
+  color: $white;
+  padding-bottom: 30px;
+
+  &Items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &Descr {
+    width: 40%;
+
+    & > div {
+      display: flex;
+      margin-bottom: 30px;
+    }
+
+    span {
+      font-weight: bold;
+      line-height: 30px;
+      font-size: 18px;
+    }
+
+    i {
+      margin-right: 20px;
+    }
+  }
+
+  &Block {
+    h2 {
+      text-transform: uppercase;
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &Img {
+    width: 100px;
+  }
+}
+
+
+.restaurantWork {
+  background: $white;
+  &Block {
+    padding: 60px 0;
+
+    h2 {
+      color: var(--black);
+      padding-bottom: 40px;
+    }
+  }
+
+  &Img {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
+.partnerBlockForm {
+  width: 500px;
+  margin: auto;
+  padding: 40px 0;
+
+  h3 {
+    text-align: center;
+  }
+}
+
+#contactPartner {
+  text-align: justify;
+  background: #F9F9F9;
+  padding: 25px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+  input {
+    font-size: inherit;
+  }
+
+  h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+
+  button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: $red;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  button[type="submit"]:hover {
+    background: var(--dark-red);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.inputCheckbox {
+  font-size: 15px;
+  margin: 15px 0;
+  font-size: 12px;
+}
+
+.partnerForm {
+  background-image: url("../img/123.jpg");
+  width: 100%;
+  z-index: -1;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.policyLabel {
+  a {
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+#contactPartner input[type="email"],
+#contactPartner input[type="tel"],
+#contactPartner input[type="text"],
+#contactPartner input[type="url"],
+#contactPartner textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contactPartner input[type="email"]:hover,
+#contactPartner input[type="tel"]:hover,
+#contactPartner input[type="text"]:hover,
+#contactPartner input[type="url"]:hover,
+#contactPartner textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contactPartner input:focus,
+#contactPartner textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+.overlay {
+  z-index: 99999;
+}
