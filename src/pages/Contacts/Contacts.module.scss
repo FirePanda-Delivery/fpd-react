@@ -1,0 +1,44 @@
+@import '../../scss/variables';
+
+.contacts {
+  background-color: $black;
+  padding-top: 135px;
+}
+
+.contactsBlockInformation {
+  background-color: $white;
+  padding: 30px;
+  margin-top: 30px;
+
+  a {
+    color: $red;
+  }
+}
+
+.forCouriers, .forRestaurants, .supportService {
+  line-height: 26px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid $red;
+}
+
+.contactsTitle {
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.forCouriers > span, .forRestaurants > span {
+  color: $red;
+}
+
+.forCouriers > .contactsTitle, .forRestaurants {
+  margin-top: 30px;
+}
+
+.supportService span {
+  font-weight: bold;
+}
+
+.forCouriers {
+  border-bottom: none;
+}

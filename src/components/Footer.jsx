@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 import logoSvg from '../assets/img/logo.svg';
 
 function Footer() {
@@ -12,17 +13,17 @@ function Footer() {
                         <div className="footerInformation">
                             <h6>Информация</h6>
                             <ul>
-                                <li><a href="/partners">Ресторанам</a></li>
-                                <li><a href="/courier">Курьерам</a></li>
+                                <li><Link to="/partners">Ресторанам</Link></li>
+                                <li><Link to="/courier">Курьерам</Link></li>
                             </ul>
                         </div>
                         <div className="footerAbout">
                             <h6>О компании</h6>
                             <ul>
-                                <li><a href="/contacts">Контакты</a></li>
-                                <li><a href="/terms-promotions">Условия акций</a></li>
-                                <li><a href="mailto:info@firepanda-delivery.ru">Обратная связь</a></li>
-                                <li><a href="/user-agreement">Пользовательское соглашение</a></li>
+                                <li><Link to="/contacts">Контакты</Link></li>
+                                <li><Link to="/terms-promotions">Условия акций</Link></li>
+                                <li><Link to="mailto:info@firepanda-delivery.ru"></Link>Обратная связь</li>
+                                <li><Link to="/user-agreement"></Link>Пользовательское соглашение</li>
                             </ul>
                         </div>
                     </div>
