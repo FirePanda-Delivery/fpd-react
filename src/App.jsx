@@ -7,7 +7,7 @@ import FullRestaurant from "./pages/FullRestaurant";
 import NotFound from "./pages/NotFound";
 import CourierInfo from "./pages/CourierInfo";
 import PartnersInfo from "./pages/PartnersInfo";
-
+import Contacts from "./pages/Contacts";
 import './scss/app.scss'
 
 function App() {
@@ -17,7 +17,8 @@ function App() {
                 <Route path="" element={<Home/>}/>
                 <Route path="courier" element={<CourierInfo/>}/>
                 <Route path="partners" element={<PartnersInfo/>}/>
-                {/*<Route path="cart" element={<Cart/>}/>*/}
+                <Route path="contacts" element={<Contacts/>}/>
+                <Route path="cart" element={<Cart/>}/>
                 {/*<Route path="restaurant/:id" element={<FullRestaurant/>}/>*/}
                 <Route path="*" element={<NotFound/>}/>
             </Route>
