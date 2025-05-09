@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 
 const Contacts = () => {
     return (
-        <>
             <section className={styles.contacts}>
                 <div className="container">
                     <div className={styles.contactsBlock}>
@@ -44,7 +43,6 @@ const Contacts = () => {
                     </div>
                 </div>
             </section>
-        </>
     )
 }
 export default Contacts;

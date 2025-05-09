@@ -41,4 +41,4 @@ const AccordionBlock = ({questions}) => {
     );
 };
 
-export default AccordionBlock
+export default AccordionBlock;

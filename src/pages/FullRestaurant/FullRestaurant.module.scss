@@ -1,0 +1,160 @@
+@import '../../scss/variables';
+
+.restaurantOffer {
+  margin-top: 100px;
+
+  &Block {
+    height: 320px;
+    padding-top: 50px;
+  }
+
+  &Main {
+    background-image: url("../../assets/img/resraurant-offer.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &MainOverlay {
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgb(0 0 0 / 20%), rgb(0 0 0 / 63%));
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &Information {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: $white;
+    padding: 30px 30px 20px;
+    font-weight: bold;
+  }
+
+  &Title {
+    border-bottom: 1px solid $white;
+    padding-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  &Descr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-top: 15px;
+    color: #fff;
+  }
+
+  &Rating {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &TimeWrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &RatingItems {
+    display: flex;
+    align-items: center;
+  }
+
+  &About {
+    display: flex;
+    align-items: center;
+  }
+
+  &OrderFrom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &Number {
+    margin-left: 10px;
+  }
+}
+
+.restaurantHeaderTitleItem {
+  font-weight: 100;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.content_toggle {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.restaurantContentBlock {
+  background-color: $white;
+  display: none;
+
+  & > p {
+    color: $light-black;
+    padding: 15px;
+  }
+}
+
+.restaurantFood {
+  &Category {
+    display: flex;
+
+    li {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 34px;
+      color: $white;
+      text-transform: uppercase;
+      transition: all 0.2s ease-in-out;
+      margin-left: 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  &Btn {
+    color: $white;
+    padding: 1px 20px;
+    border: 1px solid $white;
+    font-size: 16px;
+    line-height: 34px;
+    text-transform: uppercase;
+  }
+
+  &Block {
+    padding-bottom: 30px;
+  }
+}
+
+.categories {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid $white;
+
+  a {
+    font-weight: bold;
+    color: $white;
+    font-size: 20px;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid $red;
+
+    &:focus, &:hover {
+      color: $red;
+      border-color: $red;
+    }
+  }
+}
+
+

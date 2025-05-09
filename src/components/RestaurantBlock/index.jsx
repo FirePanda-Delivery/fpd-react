@@ -1,25 +1,6 @@
-import React, {useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
-
-import {addItem, selectCartItemById} from "../../redux/slices/cartSlice";
-
+import React  from "react";
 
 function RestaurantBlock({id, name, minPrice, rating, img}) {
-    const dispatch = useDispatch();
-    const cartItem = useSelector(selectCartItemById(id));
-    const addedCount = cartItem ? cartItem.count : 0;
-
-    const onClickAdd = () => {
-        const item = {
-            id,
-            name,
-            minPrice,
-            rating,
-            img
-        };
-        dispatch(addItem(item));
-    }
-
     return (
         <div className="restaurant-block">
             <img className="restaurant-block__image" src={`http://fpd.midavon.ru/api` + img} alt="restaurant"/>
