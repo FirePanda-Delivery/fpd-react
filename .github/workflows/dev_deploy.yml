@@ -45,4 +45,4 @@ jobs:
       - name: docker build
         run: docker build ./ -t fpd-ui
       - name: run image
-        run: docker run -d -p 80:80 --name fpd-ui fpd-ui
+        run: docker run -d -p 81:80 --name fpd-ui fpd-ui
