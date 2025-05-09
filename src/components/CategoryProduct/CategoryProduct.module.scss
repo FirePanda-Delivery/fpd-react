@@ -1,0 +1,15 @@
+@import '../../scss/variables';
+
+.product {
+  &Cards {
+    display: flex;
+    flex-wrap: wrap;
+    color: $white;
+  }
+}
+
+.productCardsBlock {
+  h2 {
+    padding-bottom: 40px;
+  }
+}
