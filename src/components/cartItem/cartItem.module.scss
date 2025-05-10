@@ -1,0 +1,147 @@
+@import '../../scss/variables';
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+
+  &--cart {
+    max-width: 820px;
+    margin: 90px auto;
+
+    .content__title {
+      margin: 0;
+    }
+  }
+}
+
+.item {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid $gray-line;
+  padding-top: 30px;
+  margin-top: 30px;
+
+  &Img {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    width: 10%;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+
+  h3 {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+  }
+
+  p {
+    font-size: 18px;
+    color: #8d8d8d;
+  }
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 13%;
+
+  .btnMinus {
+    svg {
+      path:first-of-type {
+        display: none;
+      }
+    }
+  }
+
+  b {
+    font-size: 20px;
+    color: #fff;
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  color: #fff;
+
+  b {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  padding: 0;
+  border: 1px solid $red;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover, &:focus {
+    border: 1px solid $white;
+    background: $dark-red;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.remove {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 4%;
+  cursor: pointer;
+
+  svg {
+    transform: rotate(45deg);
+
+    path {
+      fill: darken($color: $gray-line, $amount: 15);
+    }
+  }
+
+  .button {
+    border-color: darken($color: $gray-line, $amount: 10);
+
+    svg {
+      width: 11.5px;
+      height: 11.5px;
+      position: relative;
+    }
+
+    &:hover,
+    &:active {
+      border-color: darken($color: $gray-line, $amount: 80);
+      background-color: darken($color: $gray-line, $amount: 80);
+    }
+  }
+}
+

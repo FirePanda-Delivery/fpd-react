@@ -1,20 +1,13 @@
-import React from 'react';
+import * as React from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import styles from "./AccordionBlock.module.scss"
 
 const AccordionBlock = ({questions}) => {
-    const items = document.querySelectorAll(".accordion button");
-    function toggleAccordion() {
-        const itemToggle = this.getAttribute('aria-expanded');
-        let i;
-        for (i = 0; i < items.length; i++) {
-            items[i].setAttribute('aria-expanded', 'false');
-        }
-        if (itemToggle === 'false') {
-            this.setAttribute('aria-expanded', 'true');
-        }
-    }
-    items.forEach(item => item.addEventListener('click', toggleAccordion));
-
     return (
         <section>
             <div className={styles.blockQuestions}>
@@ -23,15 +16,17 @@ const AccordionBlock = ({questions}) => {
                     <div className={styles.accordion}>
                         {
                             questions.map(({title, content, id}) =>
-                                <div className={styles.accordionItem} key={id}>
-                                    <button aria-expanded="false">
-                                        <span className={styles.accordionTitle}>{title}</span>
-                                        <span className={styles.icon} aria-hidden="true"></span>
-                                    </button>
-                                    <div className={styles.accordionContent}>
-                                        <p>{content}</p>
-                                    </div>
-                                </div>
+                                <Accordion key={id}>
+                                    <AccordionSummary expandIcon={<ExpandMoreIcon/>}
+                                                      aria-controls="panel2-content" id="panel2-header">
+                                        <Typography component="span">{title}</Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                            {content}
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
                             )
                         }
                     </div>

@@ -37,8 +37,8 @@ function Product({id, name, description, price, img, weight}) {
             <div className={styles.productBottom}>
                 <div className={styles.productTake}>
                     <div className={styles.addProduct}>
-                        <div className={styles.minus}>–</div>
-                        <div className={styles.addProductCount}>{addedCount > 0 && {addedCount}}</div>
+                        <div className={styles.minus} onClick={onClickMinus}>–</div>
+                        <div className={styles.addProductCount}>{addedCount}</div>
                         <div className={styles.plus} onClick={onClickAdd}>+</div>
                     </div>
 

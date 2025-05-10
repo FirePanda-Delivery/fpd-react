@@ -10,6 +10,7 @@ import {HashLink} from "react-router-hash-link";
 const FullRestaurant = () => {
     const [restaurant, setRestaurant] = useState();
     const [categories, setCategories] = useState();
+    const [showInfo, setShowInfo] = useState(false);
     const {id} = useParams();
     const navigate = useNavigate();
 
@@ -33,10 +34,26 @@ const FullRestaurant = () => {
         }
 
         fetchRestaurant()
+
     }, []);
 
     if (!restaurant || !categories) {
         return 'загрузка...'
+    }
+
+    // const targetDiv = document.querySelector(".restaurantContent");
+    // const btn = document.querySelector(".restaurantOfferAbout");
+    // btn.addEventListener('click', ()=>{
+    //     if (targetDiv.style.display !== "none") {
+    //         targetDiv.style.display = "none";
+    //     } else {
+    //         targetDiv.style.display = "block";
+    //     }
+    // })
+
+
+    function displayToggle(el, displayMod = 'block') {
+        el.style.display = window.getComputedStyle(el).display === 'none' ? displayMod : 'none'
     }
 
     return (
@@ -71,11 +88,12 @@ const FullRestaurant = () => {
                                             </div>
                                         </div>
 
-                                        <div className={styles.restaurantOfferAbout}>
+                                        <div className={styles.restaurantOfferAbout}
+                                             onClick={() => setShowInfo(!showInfo)}>
                                             <div>Информация</div>
-                                            <a className={styles.content_toggle} href="#">
+                                            <div className={styles.content_toggle}>
                                                 <i className="fas fa-chevron-down"></i>
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +101,7 @@ const FullRestaurant = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.restaurantContentBlock} id="description">
+                    <div className={styles.restaurantContent} style={{display: showInfo ? "block" : "none"}}>
                         <p> {restaurant.description}</p>
                     </div>
                 </div>
